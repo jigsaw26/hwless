@@ -1,0 +1,110 @@
+@fontsizw: 40px;
+@itemwidth: 300px;
+@itemheight: 100px;
+
+.itemsize {
+    width: @itemwidth;
+    height: @itemheight;
+}
+
+.bord {
+    border: solid 2px black; 
+}
+
+.nonbord {
+    border: 0px;
+}
+
+.main { 
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20%;
+    text-align: center; 
+    height: 200px;
+    .bord();
+}
+
+.stl {
+    display:inline-block;
+    margin-right: 5%;
+    margin-top: 50px;
+    font-size: @fontsizw; 
+    .bord();
+}
+
+.div1 { 
+    margin-left: 5%;
+    .stl();
+    .nonbord();
+}
+
+.div1 a { 
+    .itemsize();
+    text-align: left;
+}
+
+.div2 { 
+   
+    .stl();
+    .nonbord();
+}
+
+.div2 a { 
+    .itemsize();
+    text-align: center; 
+}
+
+.div3 {   
+    
+    .stl();
+    .nonbord();
+}
+
+.div3 a { 
+    .itemsize();
+    text-align: right;  
+}
+
+
+@media (min-width: 800px) and (max-width: 1459px) {
+    .main {  
+        height: 350px; 
+    } 
+    .div1{   
+        width: 40%;
+    }
+    .div2{  
+        width: 40%; 
+    }
+    .div3{  
+        width: 80%;
+        margin-right: 0%;
+    }
+    .div3 a {
+        width: 100%;
+    }
+} 
+
+@media (max-width: 799px) {
+    .main {  
+        height: 380px; 
+    } 
+    .div1 {   
+        width: 80%;
+        margin-top: 25px;
+    }
+    .div2 {  
+        width: 80%; 
+        margin-right: 0%;
+        margin-top: 25px;
+    }
+    .div3 {  
+        width: 80%;
+        margin-right: 0%;
+        margin-top: 25px;
+        height: 50px;
+    }
+    .div3 a {
+        height: 70%;
+    }
+}
